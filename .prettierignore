@@ -1,0 +1,9 @@
+dist
+coverage
+node_modules
+examples/backend
+
+# JSON config files keep the 2-space ecosystem convention (npm/tsc rewrite
+# them that way); tabs/double-quotes are a source-code convention, not JSON's.
+*.json
+.prettierrc

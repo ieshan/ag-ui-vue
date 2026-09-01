@@ -1,0 +1,26 @@
+services:
+  ag-ui-vue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    working_dir: /app
+    tty: true
+    stdin_open: true
+
+  backend:
+    build:
+      context: .
+      dockerfile: examples/backend/Dockerfile.backend
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+    profiles:
+      - example
+
+volumes:
+  node_modules:

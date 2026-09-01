@@ -1,0 +1,10 @@
+node_modules
+dist
+.git
+*.md
+!README.md
+.vscode
+.idea
+.windsurf
+coverage
+ag-ui-vue.code-workspace

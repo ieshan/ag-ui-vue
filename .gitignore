@@ -1,0 +1,9 @@
+node_modules
+dist
+ag-ui-vue.code-workspace
+*.tgz
+.claude
+.idea
+.vscode
+.windsurf
+coverage
